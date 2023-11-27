@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>"Wanna Learn"</title>
+    <link rel="stylesheet" href="CSS/rank.css">
+    <link rel="stylesheet" href="CSS/info.css">
+    <link rel="stylesheet" href="CSS/nav.css">
+</head>
+
+<body class="pageBackground">
+
+    <div class="navbar">
+        <div class="navbar">
+            <nav>
+                <ul>
+                    <li><a href="homepage.html" style="font-size: 40px; font-weight: bold;">Wanna Learn ?</a></li>
+                    <li><a href="#">
+                            <img src="IMG/coin1.png" alt="" style="width: 45px; height: 45px;">
+                            <span class="coin_number"><p>35</p></span>
+                        </a></li>
+                    <li><a href="#" onclick="toggleMenu()"><img src="IMG/space-suit.png" style="width: 50px; height: 50px;" alt=""></a></li>
+                </ul>
+                <div class="sub-menu-wrap" id="subMenu">
+                    <div class="sub-menu">
+                        <div class="profile">
+                            <img src="IMG/space-suit.png" >
+                            <h1>user name</h1>
+                            <div class="mybio"><p>my bio</p></div>
+                        </div>
+                        <span></span>
+                        <div class="course">
+                            <h1 class="mycourse">my course</h1>
+                            <div class="icon-course">
+                                <a href="#">
+                                    <img src="IMG/course.png" alt="">
+                                    <p>course</p>
+                                </a>
+                                <a href="#">
+                                    <img src="IMG/course.png" alt="">
+                                    <p>course</p>
+                                </a>
+                                <a href="#">
+                                    <img src="IMG/course.png" alt="">
+                                    <p>course</p>
+                                </a>
+                            </div>
+                        </div>    
+                        <div class="commu">
+                            <h1 class="mycommu">my community</h1>
+                            <div class="icon-commu">
+                                <a href="#"><img src="IMG/commu.png" alt="">
+                                    <p>community&nbsp;&nbsp;1</p></a>
+                                <a href="#"><img src="IMG/commu.png" alt="">
+                                    <p>community&nbsp;&nbsp;2</p></a>
+                                <a href="#"><img src="IMG/commu.png" alt="">
+                                    <p>community&nbsp;&nbsp;3</p></a>
+                            </div>    
+                                <div class="social">
+                                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                                    <a href="#"><i class="fa-brands fa-facebook" style="font-size: 28px;"></i></a>
+                                </div>
+                        </div>
+                    </div>
+                </div>
+    
+            </nav>
+                <!----                                              -->
+                
+                <a href="rank.html">
+                    <div class="return">
+                      <img src="CSS/IMG/back_2099190.png" alt="">
+                    </div>
+                  
+                  </a>
+                <main>
+
+                    <div class="part1">
+                        <div class="header">
+                            Full Stack Developer
+                        </div>
+                        <p> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Full Stack Developer คือ ผู้พัฒนาซอฟต์แวร์ทั้งส่วนที่ติดต่อกับผู้ใช้งาน 
+                            และส่วนระบบหลังบ้าน หรือก็คือ เป็นทั้ง &nbsp;Front End Developer &nbsp;และ&nbsp; Back End Developer&nbsp; ในคน ๆ เดียวกันนั่นเอง
+                            จริง ๆ แล้วในส่วนของการดูแลหน้าบ้านและหลังบ้านนั้น ก็จะมีตำแหน่ง &nbsp;Front End Developer &nbsp;และ 
+                            &nbsp;Back End Developer&nbsp; แยกตัวออกมาอยู่แล้ว แต่ความสำคัญของตำแหน่ง &nbsp;Full Stack Developer &nbsp;
+                            นั่นก็คือคนกลางที่จะคอยช่วยพัฒนาหรือประสานให้ทั้งหน้าบ้านและหลังบ้านทำงานร่วมกันได้อย่างไม่ติดขัด 
+                            ซึ่งหากขาด&nbsp; Full Stack Developer&nbsp; ไป ก็อาจทำให้โปรเจกต์นั้น ๆ สะดุดหรือพบเจอปัญหาขึ้นได้</p>
+                    </div>
+                    <div class="part2">
+                        <div class="header">
+                            Hard skill
+                        </div>
+                        <p>
+                            1. มีความรู้ด้าน&nbsp; HTML, CSS และ JavaScript&nbsp;
+                            <br>
+                            2. มีความถนัดและเชี่ยวชาญด้าน Front End Framework เช่น &nbsp;ReactJS หรือ Angu&nbsp;
+                            <br>
+                            3. มีความเข้าใจใน ภาษาด้าน &nbsp;Programming เช่น Ruby, PHP หรือ Pyt &nbsp;
+                            <br>
+                            4. มีความเชี่ยวชาญด้าน&nbsp;  Version Control 
+                            <br>
+                            5. อัดแน่นด้วยประสบการณ์ทางด้านการวางแผน ออกแบบ ติดตั้ง ควบคุม และดูแลรักษาระบบฐานข้อมูล
+                            <br>
+                            6. มีความเข้าใจในภาพรวมของโครงสร้างการออกแบบเว็บไซต์
+                            <br>
+                            7. มีความรู้สำหรับเรื่องความปลอดภัยบนเว็บไซต์
+                            <a href="Map.html">
+                                <button> Start the lesson</button>
+                            </a>
+                            
+                        </p>
+                    </div>
+
+                </main>
+
+
+    
+    <script>
+        let subMenu = document.getElementById("subMenu");
+        function toggleMenu(){
+            subMenu.classList.toggle("open-menu");}
+    </script>
+
+</body>
+</html>

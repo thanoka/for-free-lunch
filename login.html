@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Welcome</title>
+  <link rel="stylesheet" href="CSS/Index.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Mitr&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Mitr&display=swap" rel="stylesheet">
+</head>
+<body>
+
+
+  <div class="text" id="text">
+    <h1>
+      <span>W</span>
+      <span>a</span>
+      <span>n</span>
+      <span>n</span>
+      <span>a</span>
+      <span>&nbsp;</span>
+      <span>L</span>
+      <span>e</span>
+      <span>a</span>
+      <span>r</span>
+      <span>n</span>
+
+    </h1>
+  <h2>let's find out your interest </h2>
+  </div>
+
+  <main class="Login_box" id="box">
+    <div class="cls_btn" onclick="popupClose()"> &#x2715; </div>
+    <div>ID:</div>
+    <input type="text" name="" id="" placeholder="Insert Your ID">
+    <div>Password:</div>
+    <input type="text" name="" id="" placeholder="Insert Your password">
+    <div class="btn">
+      <a href="homepage.html" class="btn">
+        <button>Get Start</button>
+      </a>
+      
+    </div> 
+    
+    <div class="forgot"> Forgot your password?</div>
+    <div class="sign_in"> Join us </div>
+  </main>
+
+  <div class="login" onclick="popup()" id="login">
+    < Get Start >
+  </div>
+
+  <script>  
+  function popup(){
+    document.getElementById('box').classList.add('active')
+    document.getElementById('text').classList.add('active')
+    document.getElementById('login').classList.add('active')
+  }
+  function popupClose() {
+    document.getElementById('box').classList.remove('active')
+    document.getElementById('text').classList.remove('active')
+    document.getElementById('login').classList.remove('active')
+  }
+  </script>
+</body>
+</html>
