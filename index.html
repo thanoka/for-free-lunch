@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Zoomable Grid</title>
+      
+        <link rel="manifest" href="manifest.json">
+      
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+        <meta name="theme-color" content="#000000">
+        <link rel="icon" href="icon-192x192.png">
+      
+        <style>
+          body {
+            background-color: black;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+          }
+      
+          .level-container {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            translate: -50% -50%;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 2px;
+            width: max-content;
+            margin: 0 auto;
+            transform: perspective(50vw) rotateX(65deg) rotateY(0deg) rotateZ(-90deg) scale(1);
+            transform-origin: center;
+            perspective-origin: 50% 10%;
+            transition: transform 0.2s ease;
+          }
+      
+          .box {
+            background-color: aquamarine;
+            width: 100px;
+            height: 100px;
+          }
+      
+          .box:hover {
+            background-color: rgb(102, 207, 172);
+          }
+      
+          .disable {
+            visibility: hidden;
+            pointer-events: none;
+          }
+      
+          @media (max-width: 500px) {
+            .level-container {
+              transform: perspective(50vw) rotateX(15deg) rotateY(0deg) rotateZ(0deg) scale(1);
+              grid-template-columns: repeat(4, 1fr);
+            }
+      
+            .box {
+              background-color: aquamarine;
+              width: 75px;
+              height: 75px;
+            }
+          }
+        </style>
+      </head>
+  <body>
+    <div class="level-container">
+      <div class="box"></div>
+      <div class="box"></div>
+      <div class="box"></div>
+      <div class="box"></div>
+      <div class="box"></div>
+      <div class="box"></div>
+      <div class="box"></div>
+      <div class="box disable"></div>
+      <div class="box"></div>
+      <div class="box"></div>
+      <div class="box"></div>
+      <div class="box"></div>
+      <div class="box"></div>
+      <div class="box"></div>
+      <div class="box"></div>
+      <div class="box"></div>
+      <div class="box"></div>
+      <div class="box"></div>
+      <div class="box"></div>
+      <div class="box"></div>
+    </div>
+
+    <script>
+      const levelContainer = document.querySelector('.level-container');
+      let scale = 1; 
+      let initialDistance = null; 
+      const screenWidth = window.innerWidth;
+
+      if ('serviceWorker' in navigator) {
+        window.addEventListener('load', () => {
+          navigator.serviceWorker.register('service-worker.js')
+            .then((registration) => {
+              console.log('Service Worker registered with scope: ', registration.scope);
+            })
+            .catch((error) => {
+              console.log('Service Worker registration failed: ', error);
+            });
+        });
+      }
+
+      
+      function zoom(event) {
+        event.preventDefault();
+
+      
+        if (event.deltaY < 0) {
+          scale += 0.1; 
+        } else {
+          scale = Math.max(0.5, scale - 0.1);
+        }
+
+        
+        levelContainer.style.scale = `${scale}`;
+      }
+
+     
+      function touchZoom(event) {
+        if (event.touches.length < 2) return; 
+
+
+        const currentDistance = Math.hypot(
+          event.touches[0].pageX - event.touches[1].pageX,
+          event.touches[0].pageY - event.touches[1].pageY
+        );
+
+        if (initialDistance === null) {
+          initialDistance = currentDistance;
+        }
+
+        const zoomFactor = currentDistance / initialDistance;
+
+        scale = Math.max(0.5, Math.min(3, scale * zoomFactor));
+        initialDistance = currentDistance; 
+
+       
+        levelContainer.style.scale = `${scale}`;
+      }
+
+     
+      window.addEventListener('wheel', zoom);
+
+      
+      window.addEventListener('touchstart', (event) => {
+        if (event.touches.length === 2) {
+          initialDistance = Math.hypot(
+            event.touches[0].pageX - event.touches[1].pageX,
+            event.touches[0].pageY - event.touches[1].pageY
+          );
+        }
+      });
+      window.addEventListener('touchmove', touchZoom);
+      window.addEventListener('touchend', () => {
+        initialDistance = null; 
+      });
+
+     
+      document.querySelectorAll('.box').forEach((box) => {
+        box.addEventListener('click', () => {
+          console.log('pass');
+        });
+      });
+    </script>
+  </body>
+</html>
