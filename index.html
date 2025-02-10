@@ -1,11 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Gift</title>
-</head>
-<body>
-    <h2>if it worked</h2>
-</body>
+
+    <link rel="stylesheet" href="CSS/index.css" />
+    <link rel="stylesheet" href="CSS/curtain_animation.css" />
+    <link rel="stylesheet" href="CSS/dialog.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Mali:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <main class="Main_container">
+      <div id="curtain">
+        <div class="left"></div>
+        <div class="right"></div>
+
+        <div class="curtainBox">
+          <div class="paragraph">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi
+            eligendi illo modi dolorem nobis adipisci.
+          </div>
+          <button class="btn" onclick="showTime();">Move Boxes</button>
+        </div>
+      </div>
+
+      <div class="main">
+        <div class="dialogContainer">
+            <div class="dialogBox">
+              <label for="" style="font-weight: bold; font-size: 1rem"
+                >Cartoon :
+              </label>
+              <textarea id="dialog" disabled></textarea>
+              <span class="tip"> click to continuse</span>
+            </div>
+            <div class="char"></div>
+          </div>
+      </div>
+
+      
+
+      <div class="counter">0 / 10</div>
+    </main>
+
+    <script src="JS/index.js"></script>
+    <script type="module" src="JS/dialog.js"></script>
+    <script type="module" src="JS/games.js"></script>
+  </body>
 </html>
