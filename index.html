@@ -4,12 +4,12 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Gift</title>
-
     <link rel="stylesheet" href="CSS/index.css" />
     <link rel="stylesheet" href="CSS/curtain_animation.css" />
     <link rel="stylesheet" href="CSS/dialog.css" />
-    <link rel="stylesheet" href="CSS/content.css">
-    <link rel="stylesheet" href="CSS/state.css">
+    <link rel="stylesheet" href="CSS/content.css" />
+    <link rel="stylesheet" href="CSS/state.css" />
+    <link rel="stylesheet" href="CSS/end.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -19,44 +19,40 @@
   </head>
   <body>
     <main class="Main_container">
-      <!-- <div id="curtain">
+      <div id="curtain">
         <div class="left"></div>
         <div class="right"></div>
 
         <div class="curtainBox">
           <div class="paragraph">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi
-            eligendi illo modi dolorem nobis adipisci.
           </div>
-          <button class="btn" onclick="showTime();">Move Boxes</button>
+          <div class="btn-start" onclick="showTime();">Click to start</div>
         </div>
-      </div> -->
+      </div>
 
       <div class="main">
         <div class="content">
+          <div class="char"></div>
         </div>
         <div class="dialogContainer">
-            <div class="dialogBox">
-              <label for="" style="font-weight: bold; font-size: 1rem"
-                >Cartoon :
-              </label>
-              <textarea id="dialog" disabled></textarea>
-              <span class="tip"> Click here to continues</span>
-              <div class="char"></div>
-            </div>            
+          <div class="dialogBox">
+            <label for="" style="font-weight: bold; font-size: 1rem"
+              >Cartoon :
+            </label>
+            <textarea id="dialog" disabled></textarea>
+            <div class="tip"> Click here to continues</div>
           </div>
+        </div>
       </div>
 
-      
-
-      <div class="counter">0 / 10</div>
+      <div class="counter">0 / 7</div>
     </main>
 
     <script src="JS/index.js"></script>
     <script type="module" src="JS/dialog.js"></script>
     <script type="module" src="JS/games.js"></script>
     <script type="module" src="JS/state.js"></script>
-    <script src="JS/gameSub.js"></script>
-
+    <script type="module" src="JS/gameSub.js"></script>
+    <script type="module" src="JS/end.js"></script>
   </body>
 </html>

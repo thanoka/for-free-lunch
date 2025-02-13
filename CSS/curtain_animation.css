@@ -51,20 +51,18 @@
   }
   
 
-.btn {
+.btn-start {
     padding: 10px 20px;
-    background-color: transparent;
+    background-color: none;
     color: crimson;
     font-size: 20px;
     font-weight: bold;
     text-transform: uppercase;
-	text-decoration: underline;
     border: none;
     cursor: pointer;
     outline: none;
-    border-radius: 5px;
     transition: 0.5s;
-	animation: heartbeat 1.5s infinite;
+	animation: heartbeat 3s infinite;
 }
 
 
