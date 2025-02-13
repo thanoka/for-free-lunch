@@ -10,8 +10,8 @@
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+    filter: drop-shadow(5px 7px 5px  #202020);
 }
-
 .dialogBox {
     position: relative;
     display: flex;
