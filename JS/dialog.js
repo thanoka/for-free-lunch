@@ -1,5 +1,5 @@
 const dialog = [
-    "let's talk about it_",
+    "let's talk about it wecfevhgjmkm,;/.l,kumjnhbgvfdcscf;.l,kmhjngbfvdcs;lk,jmhngbfvd_",
     "I'm here for you_",
     "I'm listening_",
     "I'm here to help_",
@@ -42,15 +42,7 @@ document.querySelector('.dialogBox').addEventListener('click', function() {
     }
 });
 
-document.querySelector('#dialog').addEventListener('click', function() {
-    if (!isTyping) {
-        Currentindex++;
-        if (Currentindex >= dialog.length) {
-            Currentindex = 0;
-        }
-        startTyping();
-    }
-});
+
 
 startTyping();
 
