@@ -31,7 +31,7 @@ const dialog = [
     "",
 ];
     let CurrentState = 0;
-    let Currentindex = 25;
+    let Currentindex = 0;
     let charIndex = 0;
     let typingSpeed = 10;
     let isTyping = false;
@@ -75,6 +75,8 @@ export function resetGame() {
     CurrentState = 0;
     startTyping();
 }
+
+resetGame()
 
 
 export function next() {
